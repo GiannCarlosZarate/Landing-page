@@ -1,0 +1,21 @@
+@mixin flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+@mixin justify-content {
+    justify-content: -webkit-justify-content;
+	justify-content: -ms-flex-pack;
+}
+// Mixin flexbox------------------------>
+
+@mixin for-table-only {
+    @media (max-width: 900px) { @content; }
+}
+  @mixin for-celphone-portrait-up {
+    @media (max-width: 400px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 2000px) { @content; }
+}

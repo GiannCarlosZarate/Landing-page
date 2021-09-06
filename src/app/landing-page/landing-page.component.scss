@@ -1,0 +1,334 @@
+// importaciones de hojas parciales--------------------->
+@import "./../scss/mixins";
+@import "./../scss/playsholder";
+@import "./../scss/variable";
+@import "./../scss/fonts";
+
+// section main------------------------------------------->
+.section-main{
+
+    @include flex;
+
+    justify-content: flex-end;
+    align-items: center;
+
+    background-image: url(./../../assets/jpg/img-bg-card-pc-04.jpg);
+    min-height: 768px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0px 80px 0px 0px;
+
+    @include for-table-only{
+        padding: 5%;
+        justify-content: center
+    }
+
+    &__container{
+
+        @include flex;
+
+        flex-direction: column;
+        max-width: 580px;
+        height: 100%;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+
+        @include for-table-only{
+            justify-content: center
+        }
+
+        @include for-big-desktop-up{
+        max-width: 800px;
+        }
+
+        &__txt{
+
+            @include flex;
+
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 60px;
+            background-color: #fff;
+
+            @include for-table-only{
+                padding: 5%;
+            }
+    
+
+            &--title{
+                font-family: regular;
+                font-size: 25px;
+                color: #0054b6;
+
+                @include for-celphone-portrait-up{
+                    font-size: 18px;
+                }
+                
+                @include for-big-desktop-up{
+                    font-size: 30px;
+                }
+
+                & b{
+                    font-family: bold;
+                }
+            }
+
+            &--img{
+                padding-top: 40px;
+                width: 25px;
+            }
+        }
+
+        &__blue{
+            height: 6px;
+            background-color: #0054b6;
+        }
+    }
+}
+// section pdf-------------------------------------->
+.section-report{   
+
+    @include flex;
+
+    justify-content: space-between;
+    padding: 130px;
+    flex-wrap: nowrap;
+
+    @include for-table-only{
+        padding: 5%;
+        justify-content: center;
+        flex-direction: column
+    }
+
+    &__sub-container{
+        
+        @include flex;
+
+        align-items: center;
+        justify-content: center;
+
+        
+        &--title{
+            font-family: regular;
+            font-size: 25px;
+            color: #0054b6;
+
+            @include for-celphone-portrait-up{
+                font-size: 18px;
+            }
+
+            @include for-big-desktop-up{
+                font-size: 30px;
+            }
+            
+            & b{
+                font-family: bold;
+            }
+        }
+    }
+    
+    &__sub-container-btn{
+
+        @include flex;
+
+        align-items: center;
+        justify-content: flex-end;
+        width: 20%;
+
+        @include for-table-only{
+            width: 100%;
+            justify-content: center
+        }
+
+        &--btn-blue{
+            
+            @extend %buton-blue;
+
+            @include for-celphone-portrait-up{
+                font-size: 10px;
+                padding: 5%
+            }
+
+            @include for-big-desktop-up{
+                font-size: 20px;
+            }
+
+            &__dowload{
+                text-decoration: none;
+                color: #0054b6;
+
+                &:hover{
+                    color: #fff;
+                }
+            }
+            
+        }
+    }        
+}
+
+// section ecomerce--------------------------------->
+.section-ecomerce{
+
+    @include flex;
+
+    justify-content: space-between;
+    padding: 130px;
+    background-color: #0054b6;
+
+    @include for-table-only{
+        padding: 5%;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &__container-txt{
+
+        border-bottom: 2px solid #fff;
+        margin-bottom: 30px;
+
+        &--title{
+            font-family: regular;
+            font-size: 25px;
+            color: #fff;
+            
+            @include for-celphone-portrait-up{
+                font-size: 18px;
+            }
+
+            @include for-big-desktop-up{
+                font-size: 30px;
+            }
+            
+            & b{
+                font-family: bold;
+            }
+        }
+    }
+
+    &__container-buton{
+
+        @include flex;
+
+        align-items: center;
+        justify-content: flex-end;
+        width: 20%;
+
+        @include for-table-only{
+            width: 100%;
+            justify-content: center
+        }
+
+        &--btn-gren{
+
+            @extend %buton-gren;
+
+            @include for-celphone-portrait-up{
+                font-size: 10px;
+                padding: 5%;
+                min-width: 150px;
+            }
+
+            @include for-big-desktop-up{
+                font-size: 20px;
+            }
+            
+        }
+    }
+}
+
+.section-footer{
+
+    @include flex;
+
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f3f3f3;
+    padding: 20px;
+
+    &__logo{
+        width: 70px;
+    }
+
+    &--txt{
+        font-family: regular;
+        font-size: 18px;
+        color: #0054b6;
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+
+
+// seccion de pop up----------------------->
+.container-main{
+
+    @include flex;
+
+    justify-content: center;
+    align-items: center;
+
+    &__container-group{
+        
+        &__blue{
+            height: 8px;
+            background-color: #a8ad00;
+        }
+
+        &__container{
+            background-color: #f3f3f3;
+
+            &--group{
+
+                @include flex;
+
+                padding: 5px 15px;
+
+                justify-content: center;
+                flex-direction: column;
+
+                &__title{
+                    font-family: bold;
+                    color: black;
+                    font-size: 20px;
+                    padding: 0px;
+                    margin: 5px 0px;
+                }
+
+                &__input{
+                    background-color: #ffff;
+                    color: rgba($color: #000000, $alpha: 0.5);
+                    padding: 15px;
+                    border: none;
+                    border-radius: 6px;
+                    font-family: regular;
+                    font-size: 15px;
+                }
+
+            }
+        }
+
+        &__btn{
+            
+            @include flex;
+
+            padding: 40px;
+            background-color: #f3f3f3;
+
+            &__gren{
+
+                @extend %buton-gren;
+
+                @include for-celphone-portrait-up{
+                    font-size: 10px;
+                    padding: 5%;
+                    min-width: 150px;
+                }
+    
+                @include for-big-desktop-up{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

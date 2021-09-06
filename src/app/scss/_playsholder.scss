@@ -1,0 +1,34 @@
+%buton-blue{
+    border: 2px solid #0054b6;
+    color: #0054b6;
+    background-color: #fff;
+    padding: 15px 37px;
+    font-family: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+
+    &:hover{
+        border: 2px solid #0054b6;
+        color: #fff;
+        background-color: #0054b6;
+        transition: all 0.3s ease;
+    }
+}
+%buton-gren{
+    border: none;
+    color: #fff;
+    background: linear-gradient(16deg, rgba(214,214,7,1) 0%, rgba(167,173,0,1) 100%);
+    box-shadow: 0px 10px 40px  rgba(0, 0, 0, 0.5);
+    padding: 15px 37px;
+    font-family: bold;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    min-width: 200px;
+
+    &:hover{
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+    }
+}
