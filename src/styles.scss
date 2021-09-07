@@ -1,17 +1,9 @@
-@import "./app/scss/mixins";
-@import "./app/scss/playsholder";
-@import "./app/scss/variable";
-@import "./app/scss/fonts";
 // importaciones de hojas parciales--------------------->
-@font-face {
-    font-family: bold;
-    src: url(./assets/font/OpenSans-Bold.ttf);
-}
-@font-face {
-    font-family: regular;
-    src: url(./assets/font/OpenSans-Regular.ttf);
-}
-// fuentes generales ------------------------------------>
+@import "./app/scss/variable";
+@import "./app/scss/mixins";
+@import "./app/scss/placeholder";
+@import "./app/scss/fonts";
+
 body{
     margin: 0px;
 }

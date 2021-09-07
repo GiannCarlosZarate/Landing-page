@@ -14,9 +14,9 @@
     </div>
 
     <div class="section-report__sub-container-btn">    
-        <button type="button" class="section-report__sub-container-btn--btn-blue">
-            <a href="./../../assets/pdf/pdfecommerce.pdf" download="Tendencias-Ecommerce-2022" class="section-report__sub-container-btn--btn-blue__dowload"> DESCARGAR INFORME</a>
-        </button>
+        <a href="./../../assets/pdf/pdfecommerce.pdf" download="Tendencias-Ecommerce-2022" class="section-report__sub-container-btn--btn-blue">
+            <p class="section-report__sub-container-btn--btn-blue__dowload"> DESCARGAR INFORME</p>
+        </a>
     </div>
 </section>
 
@@ -26,21 +26,23 @@
     </div>
 
     <div class="section-ecomerce__container-buton">
-        <button class="section-ecomerce__container-buton--btn-gren" type="button" id="btnModal" data-toggle="modal" data-target="#exampleModal">ME INTERESA</button>
+        <button class="section-ecomerce__container-buton--btn-gren" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">ME INTERESA</button>
     </div>
 </section>
 
 <section class="section-footer">
-    <img src="./../../assets/jpg/logo-doctus-azul-06.svg" alt="" class="section-footer__logo">
+    <img src="./../../assets/jpg/logo-doctus-azul-06.svg" alt="Logotipo doctus" class="section-footer__logo">
     <a href="https://doctus.com.co/" class="section-footer--txt">Power by: doctus</a>
 </section>
 
   <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog container-main" role="document">
         <div class="modal-content container-main__container-group">
-            <div class="container-main__container-group__blue"></div>           
-            <form action="" class="modal-body container-main__container-group__container">
+            <div class="container-main__container-group__blue"></div>   
+            
+            
+            <!-- <form action="" class="modal-body container-main__container-group__container">
                 <div class="modal-body container-main__container-group__container--group">
                     <p class="modal-body container-main__container-group__container--group__title">Nombre</p>
                     <input type="text" class="modal-body container-main__container-group__container--group__input">
@@ -57,10 +59,225 @@
                     <p class="modal-body container-main__container-group__container--group__title">Celular</p>
                     <input type="text" class="modal-body container-main__container-group__container--group__input">
                 </div>
-            </form>
-            <div class="modal-body container-main__container-group__btn">
-                <button type="button" class="modal-body container-main__container-group__btn__gren" data-dismiss="modal">Enviar</button>
+            </form> -->
+
+
+
+            <!-- Html general del Formulario del CRM -->
+            <div id='crmWebToEntityForm' class='zcwf_lblLeft crmWebToEntityForm'>
+
+                <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+                <META HTTP-EQUIV ='content-type' CONTENT='text/html;charset=UTF-8'>
+                <form action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads4294270000019879001 method='POST' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory4294270000019879001()' accept-charset='UTF-8' class="form">
+                    <input type='text' style='display:none;' name='xnQsjsdp' value='64970cbe952e161477d89b81132b6e576084f5362d3e1ccbbce4ec79b903f0cb'> 
+                    <input type='hidden' name='zc_gad' id='zc_gad' value=''> 
+                    <input type='text' style='display:none;' name='xmIwtLD' value='6e2719b4dcd2511230120a3874655845f38b8a8aeb310f357c19e3b14fb3b7ab'> 
+                    <input type='text'  style='display:none;' name='actionType' value='TGVhZHM='>
+                    <input type='text' style='display:none;' name='returnURL' value='https&#x3a;&#x2f;&#x2f;doctus.com.co&#x2f;' > 
+
+                    <!-- Do not remove this code. -->
+                    <input type='text' style='display:none;' id='ldeskuid' name='ldeskuid'>
+                    <input type='text' style='display:none;' id='LDTuvid' name='LDTuvid'>
+                    <!-- Do not remove this code. -->
+
+                    <div class="container__title-close">
+                        <div class='zcwf_title'>Se parte del futuro, ingresa tus datos</div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class='zcwf_row'>
+                        <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'>
+                            <label for='First_Name'>Nombre<span style='color:#ccd303;'>*</span></label>
+                        </div>
+                        <div class='zcwf_col_fld'>
+                            <input type='text' id='First_Name' name='First Name' maxlength='40'>
+                            <div class='zcwf_col_help'></div>
+                        </div>
+                    </div>
+
+                    <div class='zcwf_row'>
+                        <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'>
+                            <label for='Last_Name'>Apellido<span style='color:#ccd303;'>*</span></label>
+                        </div>
+                        <div class='zcwf_col_fld'>
+                            <input type='text' id='Last_Name' name='Last Name' maxlength='80'>
+                            <div class='zcwf_col_help'></div>
+                        </div>
+                    </div>
+
+                    <div class='zcwf_row'>
+                        <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'>
+                            <label for='Company'>Compañia<span style='color:#ccd303;'>*</span></label>
+                        </div>
+                        <div class='zcwf_col_fld'>
+                            <input type='text' id='Company' name='Company' maxlength='100'>
+                            <div class='zcwf_col_help'></div>
+                        </div>
+                    </div>
+
+                    <div class='zcwf_row'>
+                        <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'>
+                            <label for='Email'>Correo<span style='color:#ccd303;'>*</span></label>
+                        </div>
+                        <div class='zcwf_col_fld'>
+                            <input type='text' ftype='email' id='Email' name='Email' maxlength='100'>
+                            <div class='zcwf_col_help'></div>
+                        </div>
+                    </div>
+
+                    <div class='zcwf_row'>
+                        <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'>
+                            <label for='Phone'>Celular<span style='color:#ccd303;'>*</span></label>
+                        </div>
+                        <div class='zcwf_col_fld'>
+                            <input type='text' id='Phone' name='Phone' maxlength='30'>
+                            <div class='zcwf_col_help'></div>
+                        </div>
+                    </div>
+
+                    <div class='zcwf_row wfrm_fld_dpNn'>
+
+                        <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'>
+                            <label for='Lead_Source'>Lead Source</label>
+                        </div>
+
+                        <div class='zcwf_col_fld'>
+
+                            <select class='zcwf_col_fld_slt' id='Lead_Source' name='Lead Source'>
+                                <option value='-None-'>-None-</option>
+                                <option value='Apertura&#x20;equipo&#x20;comercial'>Apertura equipo comercial</option>
+                                <option value='Bases&#x20;de&#x20;datos&#x20;adquiridas'>Bases de datos adquiridas</option>
+                                <option value='Eventos'>Eventos</option>
+                                <option value='Facebook'>Facebook</option>
+                                <option value='Facebook&#x20;Ads'>Facebook Ads</option>
+                                <option value='Instagram'>Instagram</option>
+                                <option value='Linked&#x20;In'>Linked In</option>
+                                <option value='Linkedin&#x20;Ads'>Linkedin Ads</option>
+                                <option selected value='Mailing'>Mailing</option>
+                                <option value='Recomendado&#x20;&#x28;Referido&#x20;por&#x20;CEO&#x29;'>Recomendado &#x28;Referido por CEO&#x29;</option>
+                                <option value='Referido&#x20;Cliente'>Referido Cliente</option>
+                                <option value='SEM'>SEM</option>
+                                <option value='SEO'>SEO</option>
+                                <option value='Socio&#x20;&#x2f;&#x20;Partner'>Socio &#x2f; Partner</option>
+                                <option value='Twitter'>Twitter</option>
+                            </select>
+
+                            <div class='zcwf_col_help'></div>
+
+                        </div>
+
+                    </div>
+
+                    <div class='zcwf_row wfrm_fld_dpNn'>
+                        <div class='zcwf_col_lab' style='font-size:12px; font-family: Arial;'>
+                            <label for='LEADCF12'>Palabra de b&uacute;squeda &#x28;KeyWord&#x29;</label>
+                        </div>
+                        <div class='zcwf_col_fld'>
+                            <input type='text' id='LEADCF12' name='LEADCF12' maxlength='255' value='Ecommerce&#x20;mailing&#x20;Q3&#x20;2021'>
+                            <div class='zcwf_col_help'></div>
+                        </div>
+                    </div>
+
+                    <div class='zcwf_row'>
+                        <div class='zcwf_col_lab'></div>
+                        <div class='zcwf_col_fld'>
+                            <input type='submit' id='formsubmit' class='formsubmit zcwf_button' value='Enviar' title='Enviar'>
+                            <input type='reset' class='zcwf_button_2' name='reset' value='Reiniciar' title='Reiniciar'>
+                        </div>
+                    </div>
+
+                    <!-- Js general del Formulario del CRM -->
+                    <script>
+
+                        function validateEmail4294270000019879001()
+                        {
+                            var form = document.forms['WebToLeads4294270000019879001'];
+                            var emailFld = form.querySelectorAll('[ftype=email]');
+                            var i;
+                            for (i = 0; i < emailFld.length; i++)
+                            {
+                                var emailVal = emailFld[i].value;
+                                if((emailVal.replace(/^\\s+|\\s+$/g, '')).length!=0 )
+                                {
+                                    var atpos=emailVal.indexOf('@');
+                                    var dotpos=emailVal.lastIndexOf('.');
+                                    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=emailVal.length)
+                                    {
+                                        alert('Please enter a valid email address. ');
+                                        emailFld[i].focus();
+                                        return false;
+                                    }
+                                }
+                            }
+                            return true;
+                        }
+            
+                        function checkMandatory4294270000019879001() {
+                            var mndFileds = new Array('Company','First Name','Last Name','Email','Phone');
+                            var fldLangVal = new Array('Compa\\xF1ia','Nombre','Apellido','Correo','Celular');
+                            for(i=0;i<mndFileds.length;i++) {
+                            var fieldObj=document.forms['WebToLeads4294270000019879001'][mndFileds[i]];
+                            if(fieldObj) {
+                                if (((fieldObj.value).replace(/^\\s+|\\s+$/g, '')).length==0) {
+                                if(fieldObj.type =='file')
+                                    { 
+                                    alert('Please select a file to upload.'); 
+                                    fieldObj.focus(); 
+                                    return false;
+                                    } 
+                                alert(fldLangVal[i] +' cannot be empty.'); 
+                                        fieldObj.focus();
+                                        return false;
+                                }  else if(fieldObj.nodeName=='SELECT') {
+                                        if(fieldObj.options[fieldObj.selectedIndex].value=='-None-') {
+                                    alert(fldLangVal[i] +' cannot be none.'); 
+                                    fieldObj.focus();
+                                    return false;
+                                }
+                                } else if(fieldObj.type =='checkbox'){
+                                    if(fieldObj.checked == false){
+                                    alert('Please accept  '+fldLangVal[i]);
+                                    fieldObj.focus();
+                                    return false;
+                                } 
+                                } 
+                                try {
+                                    if(fieldObj.name == 'Last Name') {
+                                    name = fieldObj.value;
+                                    }
+                                } catch (e) {}
+                                }
+                            }
+                            trackVisitor();
+                            if(!validateEmail4294270000019879001()){return false;}
+                            document.querySelector('.crmWebToEntityForm .formsubmit').setAttribute('disabled', true);
+                        }
+                    
+                        function tooltipShow4294270000019879001(el){
+                            var tooltip = el.nextElementSibling;
+                            var tooltipDisplay = tooltip.style.display;
+                            if(tooltipDisplay == 'none'){
+                                var allTooltip = document.getElementsByClassName('zcwf_tooltip_over');
+                                for(i=0; i<allTooltip.length; i++){
+                                    allTooltip[i].style.display='none';
+                                }
+                                tooltip.style.display = 'block';
+                            }else{
+                                tooltip.style.display='none';
+                            }
+                        }
+                    </script>
+
+                    <script type='text/javascript' id='VisitorTracking'>
+                        var $zoho= $zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode:'7b57a6fdfc978d62b41c5565346be173c76c3c06825f2f5942bdff7b2d7ac5a4', values:{},ready:function(){}};var d=document;s=d.createElement('script');s.type='text/javascript';s.id='zsiqscript';s.defer=true;s.src='https://salesiq.zoho.com/widget';t=d.getElementsByTagName('script')[0];t.parentNode.insertBefore(s,t);function trackVisitor(){try{if($zoho){var LDTuvidObj = document.forms['WebToLeads4294270000019879001']['LDTuvid'];if(LDTuvidObj){LDTuvidObj.value = $zoho.salesiq.visitor.uniqueid();}var firstnameObj = document.forms['WebToLeads4294270000019879001']['First Name'];if(firstnameObj){name = firstnameObj.value +' '+name;}$zoho.salesiq.visitor.name(name);var emailObj = document.forms['WebToLeads4294270000019879001']['Email'];if(emailObj){email = emailObj.value;$zoho.salesiq.visitor.email(email);}}} catch(e){}}
+                    </script>
+
+                    <!-- Do not remove this --- Analytics Tracking code starts -->
+                    <script id='wf_anal' src='https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=6e2719b4dcd2511230120a3874655845f38b8a8aeb310f357c19e3b14fb3b7abgid64970cbe952e161477d89b81132b6e576084f5362d3e1ccbbce4ec79b903f0cbgid885e3c1045bd9bdcc91bdf30f82b5696gid14f4ec16431e0686150daa43f3210513'></script>
+                    <!-- Do not remove this --- Analytics Tracking code ends. -->
+
+                </form>
             </div>
         </div>
     </div>
-  </div>
+</div>

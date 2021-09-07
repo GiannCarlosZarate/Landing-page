@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-declare var $:any;
 
 @Component({
   selector: 'app-landing-page',
@@ -11,11 +10,5 @@ export class LandingPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-
-    $( "#btnModal" ).click(function() {
-      $('#exampleModal').modal('show')
-    });
-    
   }
-
 }

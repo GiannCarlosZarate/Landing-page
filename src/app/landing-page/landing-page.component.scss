@@ -1,18 +1,17 @@
 // importaciones de hojas parciales--------------------->
-@import "./../scss/mixins";
-@import "./../scss/playsholder";
 @import "./../scss/variable";
+@import "./../scss/mixins";
+@import "./../scss/placeholder";
 @import "./../scss/fonts";
 
 // section main------------------------------------------->
 .section-main{
 
     @include flex;
+    @include align-items(center);
+    @include justify-content(flex-end);
 
-    justify-content: flex-end;
-    align-items: center;
-
-    background-image: url(./../../assets/jpg/img-bg-card-pc-04.jpg);
+    background-image: url("./../../assets/jpg/img-bg-card-pc-04.png");
     min-height: 768px;
     background-position: center;
     background-repeat: no-repeat;
@@ -20,21 +19,25 @@
     padding: 0px 80px 0px 0px;
 
     @include for-table-only{
+
+        @include justify-content(center);
+
         padding: 5%;
-        justify-content: center
     }
 
     &__container{
 
         @include flex;
+        @include flex-column;
 
-        flex-direction: column;
         max-width: 580px;
         height: 100%;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
 
         @include for-table-only{
-            justify-content: center
+
+            @include justify-content(center);
+
         }
 
         @include for-big-desktop-up{
@@ -44,12 +47,12 @@
         &__txt{
 
             @include flex;
+            @include align-items(center);
+            @include justify-content(center);
+            @include flex-column;
 
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
             padding: 60px;
-            background-color: #fff;
+            background-color: $white;
 
             @include for-table-only{
                 padding: 5%;
@@ -59,7 +62,7 @@
             &--title{
                 font-family: regular;
                 font-size: 25px;
-                color: #0054b6;
+                color: $blue;
 
                 @include for-celphone-portrait-up{
                     font-size: 18px;
@@ -82,7 +85,7 @@
 
         &__blue{
             height: 6px;
-            background-color: #0054b6;
+            background-color: $blue;
         }
     }
 }
@@ -90,29 +93,29 @@
 .section-report{   
 
     @include flex;
+    @include justify-content(space-between);
+    @include flex-nowrap;
 
-    justify-content: space-between;
     padding: 130px;
-    flex-wrap: nowrap;
 
     @include for-table-only{
+
+        @include flex-column;
+        @include justify-content(center);
+        
         padding: 5%;
-        justify-content: center;
-        flex-direction: column
     }
 
     &__sub-container{
         
         @include flex;
-
-        align-items: center;
-        justify-content: center;
-
+        @include align-items(center);
+        @include justify-content(center);
         
         &--title{
             font-family: regular;
             font-size: 25px;
-            color: #0054b6;
+            color: $blue;
 
             @include for-celphone-portrait-up{
                 font-size: 18px;
@@ -131,19 +134,23 @@
     &__sub-container-btn{
 
         @include flex;
-
-        align-items: center;
-        justify-content: flex-end;
+        @include align-items(center);
+        @include justify-content(flex-end);
+        
         width: 20%;
 
         @include for-table-only{
+
+            @include justify-content(center);
+
             width: 100%;
-            justify-content: center
         }
 
         &--btn-blue{
             
             @extend %buton-blue;
+
+            text-decoration: none;
 
             @include for-celphone-portrait-up{
                 font-size: 10px;
@@ -155,12 +162,7 @@
             }
 
             &__dowload{
-                text-decoration: none;
-                color: #0054b6;
-
-                &:hover{
-                    color: #fff;
-                }
+                margin: 0px;
             }
             
         }
@@ -171,26 +173,29 @@
 .section-ecomerce{
 
     @include flex;
+    @include justify-content(space-between);
 
-    justify-content: space-between;
     padding: 130px;
-    background-color: #0054b6;
+    background-color: $blue;
 
     @include for-table-only{
+
+        @include justify-content(center);
+        @include flex-column;
+
         padding: 5%;
-        justify-content: center;
-        flex-direction: column;
+
     }
 
     &__container-txt{
 
-        border-bottom: 2px solid #fff;
+        border-bottom: 2px solid $white;
         margin-bottom: 30px;
 
         &--title{
             font-family: regular;
             font-size: 25px;
-            color: #fff;
+            color: $white;
             
             @include for-celphone-portrait-up{
                 font-size: 18px;
@@ -209,14 +214,16 @@
     &__container-buton{
 
         @include flex;
+        @include align-items(center);
+        @include justify-content(flex-end);
 
-        align-items: center;
-        justify-content: flex-end;
         width: 20%;
 
         @include for-table-only{
+
+            @include justify-content(center);
+
             width: 100%;
-            justify-content: center
         }
 
         &--btn-gren{
@@ -240,10 +247,10 @@
 .section-footer{
 
     @include flex;
+    @include align-items(center);
+    @include justify-content(space-between);
 
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f3f3f3;
+    background-color: $gray;
     padding: 20px;
 
     &__logo{
@@ -253,7 +260,7 @@
     &--txt{
         font-family: regular;
         font-size: 18px;
-        color: #0054b6;
+        color: $blue;
         text-decoration: none;
         cursor: pointer;
     }
@@ -264,28 +271,26 @@
 .container-main{
 
     @include flex;
-
-    justify-content: center;
-    align-items: center;
+    @include align-items(center);
+    @include justify-content(center);
 
     &__container-group{
         
         &__blue{
             height: 8px;
-            background-color: #a8ad00;
+            background-color: $green;
         }
 
         &__container{
-            background-color: #f3f3f3;
+            background-color: $gray;
 
             &--group{
 
                 @include flex;
+                @include justify-content(center);
+                @include flex-column;
 
                 padding: 5px 15px;
-
-                justify-content: center;
-                flex-direction: column;
 
                 &__title{
                     font-family: bold;
@@ -296,8 +301,8 @@
                 }
 
                 &__input{
-                    background-color: #ffff;
-                    color: rgba($color: #000000, $alpha: 0.5);
+                    background-color: $white;
+                    color: rgba($color: $black, $alpha: 0.5);
                     padding: 15px;
                     border: none;
                     border-radius: 6px;
@@ -311,9 +316,10 @@
         &__btn{
             
             @include flex;
+            @include flex-column;
 
             padding: 40px;
-            background-color: #f3f3f3;
+            background-color: $gray;
 
             &__gren{
 
@@ -329,6 +335,166 @@
                     font-size: 20px;
                 }
             }
+
+            &__close{
+
+                @extend %buton-close;
+                margin-top: 15px;
+            }
         }
     }
+}
+
+
+
+// clases de Formulario del CRM ---------------------------------------------->
+
+html,body{
+    margin: 0px;
+}
+.form{
+
+    @include flex;
+    @include flex-column;
+
+    width: 100%;
+    align-items: center;
+}
+input{
+    background-color: $white;
+    color: rgba($color: $black, $alpha: 0.5);
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    font-family: regular;
+    font-size: 15px;
+    width: 100%;
+}
+.container__title-close{
+    @include flex;
+    @include justify-content(space-between);
+    @include align-items(center);
+    
+    width: 100%;
+    font-family: bold;
+    font-size: 18px;
+}
+.zcwf_col_lab{
+
+    & label{
+        font-family: regular;
+        font-size: 18px;
+        color: $black;
+    }
+}
+#crmWebToEntityForm.zcwf_lblLeft {
+    width:100%;
+    padding: 25px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-color: $gray;
+}
+#crmWebToEntityForm.zcwf_lblLeft * {
+    box-sizing: border-box;
+}
+#crmWebToEntityForm{text-align: left;}
+#crmWebToEntityForm * {
+    direction: ltr;
+}
+.zcwf_lblLeft .zcwf_title {
+    word-wrap: break-word;
+    padding: 0px 6px 10px;
+    font-weight: bold;
+
+}
+.zcwf_lblLeft .zcwf_col_fld {
+
+    @include flex;
+    @include justify-content(space-between);
+
+    margin-top: 10px;
+    width: 100%;
+}
+.zcwf_lblLeft .zcwf_privacy{padding: 6px;}
+.zcwf_lblLeft .wfrm_fld_dpNn{display: none;}
+.dIB{display: inline-block;}
+.zcwf_lblLeft .zcwf_col_fld_slt {
+    width: 60%;
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 4px;
+    font-size: 12px;
+    float: left;
+    resize: vertical;
+}
+.zcwf_lblLeft .zcwf_col_help {
+    float: left;
+    margin-left: 7px;
+    font-size: 12px;
+    max-width: 35%;
+    word-break: break-word;
+}
+.zcwf_lblLeft .zcwf_help_icon {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background: #fff;
+    border: 1px solid #ccc;
+    color: #ccc;
+    text-align: center;
+    font-size: 11px;
+    line-height: 16px;
+    font-weight: bold;
+    border-radius: 50%;
+}
+.zcwf_lblLeft .zcwf_row {
+    margin-top: 15px;
+    width: 100%;
+}
+.zcwf_lblLeft .zcwf_privacy_txt {
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+    font-family: Arial;
+    display: inline-block;
+    vertical-align: top;
+    color: #333;
+    padding-top: 2px;
+    margin-left: 6px;
+}
+
+
+.zcwf_lblLeft .zcwf_button {
+    @extend %buton-gren;
+    margin-right: 10px;
+}
+.zcwf_button_2{
+    @extend %buton-close;
+}
+
+.zcwf_lblLeft .zcwf_tooltip_over{
+    position: relative;
+}
+.zcwf_lblLeft .zcwf_tooltip_ctn{
+    position: absolute;
+    background: #dedede;
+    padding: 3px 6px;
+    top: 3px;
+    border-radius: 4px;word-break: break-all;
+    min-width: 50px;
+    max-width: 150px;
+    color: #333;
+}
+.zcwf_lblLeft .zcwf_ckbox{
+    float: left;
+}
+.zcwf_lblLeft .zcwf_file{
+    width: 55%;
+    box-sizing: border-box;
+    float: left;
+}
+.clearB:after{
+    content:'';
+    display: block;
+    clear: both;
 }

@@ -1,0 +1,57 @@
+@import "./../scss/variable";
+// hojas parciales ----------------->
+
+%buton-blue{
+    border: 2px solid $blue;
+    color: $blue;
+    background-color: $white;
+    padding: 15px 37px;
+    font-family: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+
+    &:hover{
+        border: 2px solid $blue;
+        color: $white;
+        background-color: $blue;
+        transition: all 0.3s ease;
+    }
+}
+%buton-gren{
+    border: none;
+    color: $white;
+    background: linear-gradient(16deg, rgba($green,1) 0%, rgba($green-gradient,1) 100%);
+    padding: 15px 37px;
+    font-family: bold;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    min-width: 200px;
+
+    &:hover{
+        // transform: translateY(-5px);
+        // transition: all 0.3s ease;
+    }
+}
+
+%buton-close{
+    border: 2px solid;
+    border-color: $gray-btn;
+    color: $gray-txt;
+    background-color: none;
+    padding: 15px 37px;
+    font-family: bold;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    min-width: 200px;
+
+    &:hover{
+        border: 2px solid;
+        border-color: $gray-btn;
+        color: $gray-txt;
+        background-color: $gray-btn;
+        transition: all 0.3s ease;
+    }
+}

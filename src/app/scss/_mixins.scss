@@ -4,10 +4,30 @@
     display: -ms-flexbox;
     display: flex;
 }
-@mixin justify-content {
-    justify-content: -webkit-justify-content;
-	justify-content: -ms-flex-pack;
+@mixin justify-content($value) {
+  -webkit-justify-content: $value;
+  -ms-flex-pack: $value;
+  justify-content: $value;
 }
+
+@mixin flex-column {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+@mixin align-items($value) {
+  -webkit-align-items: $value;
+  -ms-flex-align: $value;
+  align-items: $value;
+}
+
+@mixin flex-nowrap {
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
 // Mixin flexbox------------------------>
 
 @mixin for-table-only {
